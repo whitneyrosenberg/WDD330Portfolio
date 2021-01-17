@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+h1 {
+	font-weight: lighter;
+    background-color: #F08C8C;
+    padding: 10px;
+    color: white;
+}
+
+a{
+	text-decoration: none;
+}
+
 pre code {
   background-color: #eee;
   border: 1px solid #999;
