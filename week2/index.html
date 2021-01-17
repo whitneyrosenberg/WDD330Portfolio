@@ -12,7 +12,7 @@
 	<h1><a href="/WDD330Portfolio"> WDD 330 Portfolio - Whitney Thayne</a></h1>
 	<h2>Week 2</h2>
 	<h3>Notes</h3>
-	<h4>Novice to Ninja - Chapter 2</h4>
+	<h4>JavaScript: Novice to Ninja - Chapter 2</h4>
 	<ul>
 		<li>The syntax used by JavaScript is known as a C-style syntax because of its similarities with the C programming language.</li>
 		<li>Reserved Words:
@@ -42,6 +42,96 @@
 				<< 'Hello! My name is Whitney!';
 			</code>
 		</li>
+	</ul>
+	<h4>JavaScript: Novice to Ninja - Chapter 3</h4>
+	<h5>Arrays</h5>
+	<ul>
+		<li>We can use index notation to add new itesm to any position in an array. Positions that are left empty will be undefined.</li>
+		<li>Use the delete operator to remove an item from an array. However, this does not alter the number of elements in the array. The space where the value was removed will remain, but now with the value of undefined.<br>
+			<code>
+				let arr = [1, 2, 3];<br>
+				delete arr[2];<br>
+				console.log(arr);<br>
+				<< [1, 2, undefined]
+			</code>
+		</li>
+		<li>Use the <code>pop()</code> method to remove the last item from an array.</li>
+		<li>Use the <code>shift()</code> method or removed the first item from an array.</li>
+		<li>Use the <code>push()</code> method to append a new item to the end of an array.</li>
+		<li>Use the <code>unshift()</code> method to append a new item to the beginning of the array.</li>
+		<li>Use the <code>concat()</code> method to merge two arrays.</li>
+		<li>Use the <code>join()</code> method to turn the array into a string that comprises of all the items in the array separated by commas. You can choose a separator other than the comma by placing it inside the parantheses.</li>
+		<li>Use the <code>slice()</code> method to create a sub array by passing in the first and last indices containing the values for the new array. This is a non-destructive operation.</li>
+		<li>The <code>splice()</code> method removed items from an array then inserts new items in their place by passing in the index of the first value to be removed, the number of values to remove, and the new values to be added. This is a destructive operation.</li>
+		<li>Use the <code>reverse()</code> method to reverse the order of an array. This changes the order of the array permanently.</li>
+	</ul>
+	<h5>Sets</h5>
+	<ul>
+		<li>A set is a data structure that represents a colletion of unique values.</li>
+		<li>They are a useful way to keep track of data without having to check for duplicates.</li>
+		<li>Create a set using the <code>Set()</code> constructor.</li>
+		<li>Add items to a set using the <code>add()</code> method. If the set already containts the value, it will be ignored.</li>
+		<li>Check the size of a set with the <code>size()</code> method.</li>
+		<li>Use the <code>has()</code> method to check if a value is in a set.</li>
+		<li>Use the <code>delete()</code> method to remove a value from a set.</li>
+		<li>Use the <code>clear()</code> method to remove all values from a set.</li>
+		<li>Convert a set to an array using the spread operator in an array literal or using <code>Aray.from()</code>.</li>
+	</ul>
+	<h5>Maps</h5>
+	<ul>
+		<li>Maps are data structures that contain key and value pairs.</li>
+		<li>Create a map using the <code>Map()</code> constructor.</li>
+		<li>Add entries to maps using the <code>set()</code> method with the key and value as the arguments.</li>
+		<li>Use the <code>get()</code> method by passing in a key to get the associated value.</li>
+		<li>Use the <code>has()</code> method by passing in a key to check if that particular key in the map.</li>
+		<li>Use the <code>size</code> property to get the number of key values pairs in a map.</li>
+		<li>Use the <code>delete()</code> by passing in a key to remove a value from a map.</li>
+		<li>Use the <code>clear()</code> method to remove all key and value pairs from a map.</li>
+		<li>Convert a map to an array using the spread operator in an array literal or using <code>Aray.from()</code>.</li>
+	</ul>
+	<h4>JavaScript: Novice to Ninja - Chapter 4</h4>
+	<ul>
+		<li>There are a number of ways to define a function in JavaScript. These are the 3 most common:
+			<ol>
+				<li>
+					<code>function</code> declaration will give a "named function".<br>
+					<code>
+						function hello() { }
+					</code>
+				</li>
+				<li>Function expressions can create both named and anonymous functions.<br>
+					<code>
+						const hello = function() { }<br>
+				</code>
+				or<br>
+				<code>
+					const hello = function sayHello() { }
+				</code>
+				</li>
+				<li><code>Function()</code> constructor<br>
+					<code>
+						const hello = new Function('console.log("Hello World!");');
+					</code>
+				</li>
+			</ol>
+		</li>
+		<li>Keep your code DRY - Don't Repeat Yourself!
+			<ul>
+				<li>This can be done using functions for code that needs to be repeated.</li>
+			</ul>
+		</li>
+		<li>You can declare a function that accepts a variable number of arguments by using rest operator by placing three dots in front of the last parameter in a function declaration. This will then collect all the arguments entered into an array.</li>
+		<li>You can specify default parameters by assigning the defalt value to the parameter in the function definition.</li>
+		<li>Declaring functions as arrow functions can be useful for short anonymous functions by using less verbose syntax.<br>
+			<code>
+				const hello = () => alert('Hello World!');
+			</code>
+		</li>
+	</ul>
+	<h5>Callbacks</h5>
+	<ul>
+		<li>Functions can be passed as arguments for other functions. These are called callback functions.</li>
+		<li>The function name is passed in as an argument, then the function can be invoked with parentheses.</li>
 	</ul>
 	<h3>Exercises</h3>
 	<ul>
