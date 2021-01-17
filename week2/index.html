@@ -3,9 +3,7 @@
 <head>
   <title>Whitney Thayne - WDD 330 Portfolio</title>
   <script src="../js/week2.js"></script>
-  <style>
-
-  </style>
+  <link rel='stylesheet' href='../style/main.css'>
 </head>
 
 <body>
@@ -36,24 +34,24 @@
 		<li>The $ character is also used by the jQuery library.</li>
 		<li>If you assign a non-primitive value to a variable, then this is done by reference, so any changes that are subsequently made will affect <i>all</i> references to that object.</li>
 		<li>Use template literals (Strings with back ticks rather than quotation marks) to allow interpolation of JS code in a string.<br>
-			<code>
-				const name = `Whitney`;<br>
-				`Hello! My name is ${ name }!`;<br>
-				<< 'Hello! My name is Whitney!';
-			</code>
+			<pre>
+				<code>const name = `Whitney`;
+`Hello! My name is ${ name }!`;
+<< 'Hello! My name is Whitney!';</code>
+			</pre>
 		</li>
 	</ul>
 	<h4>JavaScript: Novice to Ninja - Chapter 3</h4>
 	<h5>Arrays</h5>
 	<ul>
 		<li>We can use index notation to add new itesm to any position in an array. Positions that are left empty will be undefined.</li>
-		<li>Use the delete operator to remove an item from an array. However, this does not alter the number of elements in the array. The space where the value was removed will remain, but now with the value of undefined.<br>
-			<code>
-				let arr = [1, 2, 3];<br>
-				delete arr[2];<br>
-				console.log(arr);<br>
-				<< [1, 2, undefined]
-			</code>
+		<li>Use the delete operator to remove an item from an array. However, this does not alter the number of elements in the array. The space where the value was removed will remain, but now with the value of undefined.
+			<pre>
+				<code>let arr = [1, 2, 3];
+delete arr[2];
+console.log(arr);
+<< [1, 2, undefined]</code>
+			</pre>
 		</li>
 		<li>Use the <code>pop()</code> method to remove the last item from an array.</li>
 		<li>Use the <code>shift()</code> method or removed the first item from an array.</li>
@@ -94,24 +92,16 @@
 		<li>There are a number of ways to define a function in JavaScript. These are the 3 most common:
 			<ol>
 				<li>
-					<code>function</code> declaration will give a "named function".<br>
-					<code>
-						function hello() { }
-					</code>
+					<code>function</code> declaration will give a "named function".
+					<pre><code>function hello() { }</code></pre>
 				</li>
-				<li>Function expressions can create both named and anonymous functions.<br>
-					<code>
-						const hello = function() { }<br>
-				</code>
-				or<br>
-				<code>
-					const hello = function sayHello() { }
-				</code>
+				<li>Function expressions can create both named and anonymous functions.
+					<pre><code>const hello = function() { }</code></pre>
+				or
+				<pre><code>const hello = function sayHello() { }</code></pre>
 				</li>
 				<li><code>Function()</code> constructor<br>
-					<code>
-						const hello = new Function('console.log("Hello World!");');
-					</code>
+					<pre><code>const hello = new Function('console.log("Hello World!");');</code></pre>
 				</li>
 			</ol>
 		</li>
@@ -122,10 +112,8 @@
 		</li>
 		<li>You can declare a function that accepts a variable number of arguments by using rest operator by placing three dots in front of the last parameter in a function declaration. This will then collect all the arguments entered into an array.</li>
 		<li>You can specify default parameters by assigning the defalt value to the parameter in the function definition.</li>
-		<li>Declaring functions as arrow functions can be useful for short anonymous functions by using less verbose syntax.<br>
-			<code>
-				const hello = () => alert('Hello World!');
-			</code>
+		<li>Declaring functions as arrow functions can be useful for short anonymous functions by using less verbose syntax.
+			<pre><code>const hello = () => alert('Hello World!');</code></pre>
 		</li>
 	</ul>
 	<h5>Callbacks</h5>
