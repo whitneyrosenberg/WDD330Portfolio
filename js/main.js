@@ -3,6 +3,10 @@ window.onload = function () {
 
 	const tableOfContents = [
 		{
+			label: 'Week 3 Work',
+			url: '/WDD330Portfolio/week3/'
+		},
+		{
 			label: 'Week 2 Work',
 			url: '/WDD330Portfolio/week2/'
 		},

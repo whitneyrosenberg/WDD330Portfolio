@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+ 	<title>Whitney Thayne - WDD 330 Portfolio</title>
+	<link rel='stylesheet' href='../style/main.css'>
+</head>
+
+<body>
+	<a href="/WDD330Portfolio"> <h1>WDD 330 Portfolio - Whitney Thayne</h1></a>
+	<h2>Week 3</h2>
+	<h3>Notes</h3>
+	<a href="https://javascript.info/object-methods"><h4> Object Methods: this</h4></a>
+	<ul>
+		<li>For an object method to access the information stored in the object the method can use the <code>this</code> keyword.</li>
+		<li>In JavaScript <code>this</code> is "free". It's value is evaulated at call-time and does not depend on where the method was declared, but rather on what object is "before the dot."</li>
+		<li>Arrow functions don't have their "own" <code>this</code>. Using <code>this</code> in an arrow function will take it from the outer "normal" function</li>
+	</ul>
+	<h4>Javacript: Novice to Ninja - Chapter 5</h4>
+	<h5>Objects</h5>
+	<ul>
+		<li>An object literal is an object that is created directly in the language by wrapping all its properties ad methods in curly braces.</li>
+		<li>If a property's name doesn't follow the rules for naming variables, it needs to e quoted.</li>
+		<li>All objects are mutable at any time when a program is running, even if it was declared using <code>const</code>.</li>
+		<li>Access youn objects properties using dot notation or bracket notation.</li>
+		<li>Symbols can be used as property keys. Using them as keys avoids any naming clashes.</li>
+		<li>The <code>in</code> operator can be used to check whether an object has a particular property.</li>
+		<li>Another way is to use the <code>hasOwnProperty()</code> method.</li>
+		<li>Loop through all of an object's properties and methods by using a <code>for in</code> loop.</li>
+		<li>The <code>Object.keys()</code> method will return an array of all of the keys of any object that is provided as an argument.</li>
+		<li>The <code>Object.values()</code> method works the same way, but returns an array of all of hte object's values. (ES2017)</li>
+		<li>The <code>Object.entries()</code> method returns an array of key-value pairs. (ES2017)</li>
+		<li>Use the <code>delete</code> operator to remove a property from an object.</li>
+		<li>Objects are assigned by reference. Changes made to any reference of the object will affect the same object. This does not happen with primitives.</li>
+		<li>Defining functions in a namespace can help avoid naming collisions.</li>
+	</ul>
+	<h5>JSON</h5>
+	<ul>
+		<li>JSON is a string representation of the object literal notation that we have just seen. There are, however, a couple of key differences:
+			<ol>
+				<li>Property names must be double-quoted.</li>
+				<li>Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects.</li>
+				<li>Functions are not permitted values.</li>
+			</ol>
+		</li>
+		<li>The <code>parse()</code> method takes a string of data in JSON format and returns a JavaScript object.</li>
+		<li>The <code>stringify()</code> method takes a JavaScript object and returns a string of JSON data.</li>
+	</ul>
+	<h5><code>Math</code> Object</h5>
+	<ul>
+		<li>The <code>Math</code> object has eight properties that represent a mix of commonly used math constants.
+			<ul>
+				<li><code>Math.PI // The ratio of the circumference and diameter of a circle</code></li>
+				<li><code>Math.SQRT2 // The square root of 2</code></li>
+				<li><code>Math.SQRT1_2 // The reciprocal of the square root of 2</code></li>
+				<li><code>Math.E // Euler's constant</code></li>
+				<li><code>Math.LN2 // The natural logarithm of 2</code></li>
+				<li><code>Math.LN10 // The natural logarithm of 10</code></li>
+				<li><code>Math.LOG2E // Log base 2 of Euler's constant</code></li>
+				<li><code>Math.LOG10E // Log base 10 of Euler's constant</code></li>
+			</ul>
+		</li>
+		<li>The <code>Math.abs()</code> method returns the absolute value of a number.</li>
+		<li>The <code>Math.ceil()</code> method will round a number up to the next integer.</li>
+		<li>The <code>Math.floor()</code> method will round a number down to the next integer.</li>
+		<li>The <code>Math.round()</code> method will round a number to the nearest integer.</li>
+		<li>The <code>Math.truc()</code> method will return the integer part of a number. (ES6)</li>
+		<li>The <code>Math.exp()</code> method will raise a number to the power of Euler's constant.</li>
+		<li>The <code>Math.pow()</code> method will raise any number to the power of another number.</li>
+		<li>The <code>Math.sqrt()</code> method returns the positive square root of a number.</li>
+		<li>The <code>Math.cbrt()</code> method returns the cube root of a number. (ES6)</li>
+		<li>The <code>Math.hypot()</code> method returns the square root of the sum of the squares of all its arguments. It can be used to calculate the hypotenuse of a right-angled triangle. (ES6)</li>
+		<li>The <code>Math.max()</code> method returns the maximum number from its arguments.</li>
+		<li>The <code>Math.min()</code> method returns the minimum number from the given arguments.</li>
+		<li>The <code>Math</code> object has the standard trigonometric functions. All angles are measured in radians for these functions.</li>
+		<li>The <code>Math.random()</code> method is used to create random numbers.</li>
+	</ul>
+	<h5>The Date Object</h5>
+	<ul>
+		<li>Create a new Date object with the constrcutor and the <code>new</code> operator. If no argument is supplied, the date will default to the current date and time.</li>
+		<li>When supplying a date for an argument, remember that January is 0, not 1, and Sunday is 0, not 1.</li>
+		<li>The Date object has getters and setters available.</li>
+	</ul>
+	<h5>The <code>RegExp</code> Object</h5>
+	<ul>
+		<li>The preferred way to create a regular expression is to use the literal notation of writing the regular expression between forward slashes.</li>
+		<li>You can also create an new instance of the <code>RegExp</code> object using the <code>new</code> operator and a constructor function.</li>
+		<li>Use the <code>test()</code> method to see if a string matches the regular expression pattern.</li>
+		<li>The <code>exec()</code> method works in the same way but instead of returning a boolean it returns and array containing the first match found or null if there are no matches.</li>
+		<h6>Special Characters</h6>
+		<li>. matches any character, except line breaks</li>
+		<li>\w matches any word character, and is equivalent to [A-Za-z0-9_]</li>
+ 		<li>\W matches any non-word character, and is equivalent to [\^A-Za-z0-9_]</li>
+ 		<li>\d matches any digit character, and is equivalent to [0-9]</li>
+ 		<li>\D matches any non-digit character, and is equivalent to [^0-9]</li>
+ 		<li>\s matches any whitespace character, and is equivalent to [ \t\r\n\f]</li>
+ 		<li>\S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]</li>
+ 		<h6>Modifiers</h6>
+ 		<li>Modifiers can be placed after a token to deal with multiple occurrences of that token.</li>
+ 		<li>? makes the preceding token in the regular expression optional</li>
+		<li> * matches one or more occurrences of the preceding token</li>
+ 		<li>+ matches one or more occurrences of the preceding token</li>
+		<li>{n} matchesnoccurrences of the preceding token</li>
+		<li>{n,} matches at leastnoccurrences of the pattern</li>
+ 		<li>{,m} matches at mostmoccurrences of the preceding token</li>
+ 		<li>{n,m} matches at leastnand at mostmoccurrences of the preceding token</li>
+ 		<li>^ marks the position immediately before the first character in the string</li>
+ 		<li>$ marks the position immediately after the last character in the string</li>
+ 	<h3>Javacript: Novice to Ninja - Chapter 6</h3>
+ 	<ul>
+ 		<li>The <code>document.querySelector()</code> method allow you to use CSS noation to find the first element in the document that matches the CSS selector provided.</li>
+ 		<li>The <code>document.querySelectorAll()</code> method also uses CSS notation, but returns a node list of all the elements in the document that match the CSS query selector.</li>
+ 		<li>The <code>querySelector()</code> method can be called on any element rather than just document.</li>
+ 		<li>Use <code>textContent</code> or <code>innerText</code> properties to find the value of a node.</li>
+ 		<li>The <code>getAttribute()</code> method returns the value of the attribute provided as an argument.</li>
+ 		<li>The <code>setAttribute()</code> method can change the value of an element's attributes given two arguments: the attribute to change and the new value.</li>
+ 		<li>The <code>classList</code> property can be used along with the <code>add()</code> and <code>remove()</code> methods to adjust the class list of an element without overwritiing previous values.</li>
+ 		<li>The <code>toggle()</code> method will add a class if an element doesn’t have it already, andremovethe class if it does have it.</li>
+ 		<li>The <code>contains()</code> method wil lcheck to see if an element has a particular class.</li>
+ 		<li>Update CSS by using the <code>style</code> property.</li>
+ 	</ul>
+ 	<h3>Javacript: Novice to Ninja - Chapter 7</h3>
+ 	<ul>
+ 		<li>The recommended way of dealing with events, and the current standard, is to use event listeners.</li>
+ 		<li>The <code>addEventListener()</code> method is called on a node object to attah an event listener to the document's body.</li>
+ 		<li>Three events that occur when a user presses a key are: <code>keydown</code>, <code>keypress</code>, and <code>keyup</code>.</li>
+ 		<li>The <code>touchstart</code> event occurs when a user initially touches the surface.</li>
+ 		<li>The <code>touchend</code> event occurs when a user stops touching the surface.</li>
+ 		<li>The <code>touchmove</code> event occurs after a user has touched the screen then moves around without leaving.</li>
+ 		<li>The <code>touchenter</code> event occurs when a user has already started touching the surface, but then passes over the element to which the event listener is attached.</li>
+ 		<li>The <code>touchleave</code> event occurs when the user is still touching the surface, but leaves the element to which the event listener is attached.</li>
+ 		<li>The <code>touchcancel</code> event occurs when a touch event is interrupted, such as a user’s finger moving outside the document window, or too many fingers being used at once.</li>
+ 		
+ 	</ul>
+	<h3>Questions</h3>
+	<h3>Exercises</h3>
+	<ul>
+		<a href="calculator/index.html"><li>Calculator</li></a>
+		<a href="chainingLadder/index.html"><li>Ladder Chaining</li></a>
+		<a href="quiz/index.html"><li>Quiz Game</li></a>
+		<a href="events/events.html"><li>Events</li></a>
+	</ul>
+</body>
+</html> 

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+ 	<title>Whitney Thayne - WDD 330 Portfolio</title>
+	<link rel='stylesheet' href='../../style/main.css'>
+	<script type="text/javascript">
+		let calculator = {
+			read() {
+				do {
+					this.firstValue = Number(prompt("Enter a number.")); 
+				} while (Number.isNaN(this.firstValue))
+				
+				do {
+					this.secondValue = Number(prompt("Enter a second value."));
+				} while (Number.isNaN(this.secondValue))
+			},
+
+			sum() {
+				return this.firstValue + this.secondValue;
+			},
+
+			mul() {
+				return this.firstValue * this.secondValue
+			}
+		};
+
+		calculator.read();
+		alert(calculator.sum());
+		alert(calculator.mul());
+	</script>
+</head>
+
+<body>
+	<a href="/WDD330Portfolio"> <h1>WDD 330 Portfolio - Whitney Thayne</h1></a>
+	<a href="https://javascript.info/task/calculator"><h2>Calculator Exercise</h2></a>
+</body>
+</html>

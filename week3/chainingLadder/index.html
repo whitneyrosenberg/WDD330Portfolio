@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ 	<title>Whitney Thayne - WDD 330 Portfolio</title>
+	<link rel='stylesheet' href='../../style/main.css'>
+	<script type="text/javascript">
+		let ladder = {
+		  step: 0,
+		  up() {
+		    this.step++;
+		    return this;
+		  },
+		  down() {
+		    this.step--;
+		    return this;
+		  },
+		  showStep: function() { // shows the current step
+		    alert( this.step );
+		    return this;
+		  }
+		};
+
+		ladder.up().up().down().showStep(); // 1
+	</script>
+</head>
+
+<body>
+	<a href="/WDD330Portfolio"> <h1>WDD 330 Portfolio - Whitney Thayne</h1></a>
+	<a href="https://javascript.info/task/chain-calls"><h2>Ladder Chaining Exercise</h2></a>
+	<p>I've altered the 3 ladder functions to return <code>this</code> to allow for chaining.b</p>
+</body>
+</html>
