@@ -50,12 +50,32 @@
 		<li>A mixin is a way of adding properties and methods of some objects to another object without using inheritance. It allows more complex objects to be created by ‘mixing’ basic objects together.</li>
 		<li>'Composition over inheritance'. This approach advocates creating small objects that describe single tasks or behaviors and using them as the building blocks for more complex objects. </li>
 		<li>A good rule of thumb is to only inherit once, keeping the inheritance chain to just two objects makes unpicking any issues far easier.</li>
+		<h4>JavaScript: Novice to Ninja - Chapter 15</h4>
+		<li>jQuery is the most popular of all the JavaScript libraries used today and has a plugin system that makes it easy to extend and use to build common web page elements.</li>
+		<li>A library should not be used because of a lack of understanding of JavaScript. Instead, it should be used to speed up JavaScript development by making it easier to complete common tasks.</li>
+		<li>A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. This helps to keep code organized in separate, reusable files, which improves code maintainability.</li>
+		<li>There are a few important points about modules that are worth keeping in mind:
+			<ul>
+				<li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.</li>
+				<li>A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.</li>
+				<li>The value of <code>this</code> in the top level of a module is <code>undefined</code>, rather than the global object.</li>
+				<li>You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).</li>
+			</ul>
+		</li>
+		<li>Model-View-Controller (MVC) is a design pattern that’s been used for a long time in server-side languages. MVC separates an application into three distinct, independent components that interact with each other:
+			<ul>
+				<li><b>Models</b> are objects that implement the functionality for creating, reading, updating and deleting (known as CRUD tasks) specific pieces of information about the application, as well as any other associated logic and behavior. In a to-do list application, for example, there would be a task model providing methods to access all the information about the tasks such as names, due dates and completed tasks. This data will often be stored in a database or some other container.</li>
+				<li><b>Views</b> provide a visual representation of the model showing all the relevant information. In a web application, this would be the HTML displayed on a web page. Views also provide a way for users to interact with an application, usually via forms. In a to-do list application, the views would display the tasks as an HTML list with checkboxes that a user could tick to say a task had been completed.</li>
+				<li><b>Controllers</b> link models and views together by communicating between them. They respond to events, which are usually inputs from a user (entering some data into a form, for example), process the information, then update the model and view accordingly. In a to-do list application, the controller functions would respond to the event of a user clicking on a check box and then inform the model that a task had been completed. The model would then update the information about that task.</li>
+			</ul>
+		</li>
 	</ul>
 	<h3>Exercises</h3>
 	<ul>
 		<li><a href="search/search.html">Search</a></li>
 		<li><a href="hero/hero.html">Hero</a></li>
 		<li><a href="quiz/index.html">Quiz Game</a></li>
+		<li><a href="MVC/list.html">MVC List</a></li>
 	</ul>
 </body>
 </html>
