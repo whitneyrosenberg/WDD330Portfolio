@@ -14,7 +14,7 @@ a{
 }
 
 pre code {
-  background-color: #eee;
+  background-color: #ccc;
   border: 1px solid #999;
   display: block;
   padding: 20px;
@@ -22,5 +22,5 @@ pre code {
 }
 
 code {
-	background-color: #eee;
+	background-color: #ccc;
 }
