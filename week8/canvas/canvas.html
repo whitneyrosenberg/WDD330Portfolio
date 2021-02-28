@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+ 	<title>Whitney Thayne - WDD 330 Portfolio</title>
+	<style type="text/css">
+		.myCanvas {
+		    border: dotted 2px black;
+		    margin: 0 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Canvas Practice</h1>
+	<h2>Draw Rectangle</h2>
+	<canvas id="demo1" class="myCanvas" width="200" height="200">
+    	Sorry! Your browser doesn’t support Canvas.
+	</canvas>
+	<h2>Draw Pattern</h2>
+	<canvas id="demo2" class="myCanvas" width="200" height="200">
+    	Sorry! Your browser doesn’t support Canvas.
+	</canvas>
+	<h2>Draw Gradient</h2>
+	<canvas id="demo3" class="myCanvas" width="200" height="200">
+    	Sorry! Your browser doesn’t support Canvas.
+	</canvas>
+	<h2>Draw Circle</h2>
+	<canvas id="demo4" class="myCanvas" width="200" height="200">
+    	Sorry! Your browser doesn’t support Canvas.
+	</canvas>
+	<h2>Save Canvas Drawing (using above canvas)</h2>
+	<button name="saveButton" id="saveButton">Save Circle Drawing</button>
+	<h2>Drawing Image to Canvas</h2>
+	<canvas width="200" height="200" id="demo6" class="myCanvas">
+	    Sorry! Your browser doesn't support Canvas.
+	</canvas>
+	<img src="https://raw.githubusercontent.com/spbooks/htmlcss2/cb5043b0ab76b4a85716508d1828c6dd6a40258d/images/html5-logo.png" id="myImageElem">
+
+	<script type="text/javascript">
+		var button = document.getElementById("saveButton");
+		button.addEventListener("click", saveDrawing, false);
+		window.addEventListener("load", drawImageToCanvas, false);
+
+		drawRect();
+		drawPattern();
+		drawGradient();
+		drawCircle();
+
+		function drawRect() {
+			var canvas = document.getElementById("demo1");
+			var context = canvas.getContext("2d");
+			context.strokeStyle = "red";
+			context.fillStyle =  "rgba(0, 0, 255, 0.5)";
+			context.fillRect(10, 10, 100, 100);   
+			context.strokeRect(10, 10, 100, 100);
+		}
+
+		function drawPattern() {
+		    var canvas = document.getElementById("demo2");
+		    var context = canvas.getContext("2d");
+		    context.strokeStyle = "red";
+		    var img = new Image(); 
+		    img.src = "https://raw.githubusercontent.com/spbooks/htmlcss2/master/images/bg-bike.png";
+		    img.onload = function() {
+		    	var pattern = context.createPattern(img, "repeat"); 
+			    context.fillStyle = pattern;                        
+			    context.fillRect(10, 10, 100, 100);                  
+			    context.strokeRect(10, 10, 100, 100);             
+		    }
+		}
+
+		function drawGradient() {
+		    var canvas = document.getElementById("demo3");
+		    var context = canvas.getContext("2d");
+		    context.strokeStyle = "red";
+		    var gradient = context.createLinearGradient(0, 0, 0, 200);
+		        gradient.addColorStop(0, "blue"); 
+			    gradient.addColorStop(1, "white"); 
+			    context.fillStyle = gradient; 
+			    context.fillRect(10, 10, 100, 100); 
+			    context.strokeRect(10, 10, 100, 100);  
+		}
+
+		function drawCircle(canvas) {
+		    var canvas = document.getElementById("demo4");
+		    var context = canvas.getContext("2d");
+		    context.beginPath();
+		    context.arc(50, 50, 30, 0, Math.PI*2, true);
+        	context.closePath();
+		    context.strokeStyle = "red";
+		    context.fillStyle = "blue";
+		    context.lineWidth = 3;
+    		context.fill(); 
+    		context.stroke(); 	
+		}
+
+		function saveDrawing() {
+		    var canvas5 = document.getElementById("demo4");
+		    window.open(canvas5.toDataURL("image/png"));
+		}
+
+		function drawImageToCanvas() {
+		    var canvas = document.getElementById("demo6");
+		    var context = canvas.getContext("2d");
+		    var image = document.getElementById("myImageElem");
+		    context.drawImage(image, 68, 68);
+		}
+	</script>
+</body>
+</html>
