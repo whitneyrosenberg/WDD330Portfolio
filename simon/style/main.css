@@ -1,0 +1,12 @@
+h1 {
+	text-align: center
+}
+
+#game {
+	display: flex;
+	justify-content: center;
+}
+
+.up {
+	/*display: none;*/
+}
