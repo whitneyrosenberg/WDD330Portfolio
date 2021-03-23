@@ -7,6 +7,22 @@ h1 {
 	justify-content: center;
 }
 
-.up {
-	/*display: none;*/
+g {
+	filter: saturate(75%);
+}
+
+.current-move {
+	animation: show-move 2s;
+}
+
+@keyframes show-move {
+	0% {
+		filter: saturate(75%);
+	}
+	50% {
+		filter: saturate(15);
+	}
+	100% {
+		filter: saturate(75%);
+	}
 }

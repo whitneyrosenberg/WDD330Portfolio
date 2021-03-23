@@ -1,12 +1,17 @@
+import {
+	qs,
+	onTouch
+} from './utilities.js'
+
 export default class SimonGame {
-	SimonGame() {
-		this.currentGame = [];
+	constructor() {
+		this.currentGame = ['right', 'down', 'left', 'right'];
 	}
 
-	playCurrentGame() {
-		this.currentGame.foreach((move) => {
-			this.executeMove(move);
-		});
+	async playCurrentGame() {
+		for(let move in this.currentGame) {
+			const result = await this.executeMove(this.currentGame[move]);
+		}
 		this.newMove();
 	}
 
@@ -14,25 +19,36 @@ export default class SimonGame {
 		let moveNum = Math.floor(Math.random() * (4 - 0) + 0);
 		switch(moveNum) {
 			case 0:
-			console.log('up');
+				this.currentGame.push('up');
+				console.log('up');
 			break;
 			case 1:
-			console.log('down');
+				this.currentGame.push('down');
+				console.log('down');
 			break;
 			case 2:
-			console.log('left');
+				this.currentGame.push('left');
+				console.log('left');
 			break;
 			case 3: 
-			console.log('right');
+				this.currentGame.push('right');
+				console.log('right');
 			break;
 		}
 	}
 
 	getCurrentGame() {
-
+		return this.currentGame;
 	}
 
-	executeMove() {
-
+	executeMove(move) {
+		let element = qs(`.${move}`).children[0];
+		element.classList.toggle('current-move', true);
+		return new Promise(resolve => {
+			setTimeout(() => {
+			  resolve('resolved');
+			  element.classList.toggle('current-move', false);
+			}, 2000);
+		});
 	}
 }
