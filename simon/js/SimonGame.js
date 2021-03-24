@@ -4,7 +4,7 @@ import {
 
 export default class SimonGame {
 	constructor() {
-		this.currentGame = ['up', 'up', 'down', 'left', 'right'];
+		this.currentGame = [];
 	}
 
 	async playCurrentGame() {
@@ -20,7 +20,6 @@ export default class SimonGame {
 			case 0:
 				this.currentGame.push('up');
 				this.executeMove('up');
-				console.log('up');
 			break;
 			case 1:
 				this.currentGame.push('down');
