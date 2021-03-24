@@ -1,14 +1,11 @@
 function qs(selector) {
-    let element = document.querySelectorAll(selector);
-    return element[0];
+    let elements = document.querySelectorAll(selector);
+    return elements;
   }
   
-  function onTouch(selector, callback) {
-    let elements = qs(selector);
-    elements.forEach((element) => {
-      element.addEventListener('touchend', callback);
-      element.addEventListener('click', callback);
-    });
+  function onTouch(element, callback) {
+    element.addEventListener('touchend', callback);
+    element.addEventListener('click', callback);
   }
   
   export {
