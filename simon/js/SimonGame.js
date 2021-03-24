@@ -41,13 +41,13 @@ export default class SimonGame {
 	}
 
 	executeMove(move) {
-		let element = qs(`.${move}`).children[0];
+		let element = qs(`.${move}`)[0].children[0];
 		element.classList.toggle('current-move', true);
 		return new Promise(resolve => {
 			setTimeout(() => {
 				element.classList.toggle('current-move', false);
-			}, 1500);
-			setTimeout(() => {resolve('resolved');}, 2500);
+			}, 1000);
+			setTimeout(() => {resolve('resolved');}, 1500);
 		});
 	}
 }
