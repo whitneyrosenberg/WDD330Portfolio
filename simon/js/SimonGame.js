@@ -1,11 +1,10 @@
 import {
-	qs,
-	onTouch
+	qs
 } from './utilities.js'
 
 export default class SimonGame {
 	constructor() {
-		this.currentGame = ['right', 'down', 'left', 'right'];
+		this.currentGame = ['up', 'up', 'down', 'left', 'right'];
 	}
 
 	async playCurrentGame() {
@@ -20,19 +19,20 @@ export default class SimonGame {
 		switch(moveNum) {
 			case 0:
 				this.currentGame.push('up');
+				this.executeMove('up');
 				console.log('up');
 			break;
 			case 1:
 				this.currentGame.push('down');
-				console.log('down');
+				this.executeMove('down');
 			break;
 			case 2:
 				this.currentGame.push('left');
-				console.log('left');
+				this.executeMove('left');
 			break;
 			case 3: 
 				this.currentGame.push('right');
-				console.log('right');
+				this.executeMove('right');
 			break;
 		}
 	}
@@ -46,9 +46,9 @@ export default class SimonGame {
 		element.classList.toggle('current-move', true);
 		return new Promise(resolve => {
 			setTimeout(() => {
-			  resolve('resolved');
-			  element.classList.toggle('current-move', false);
-			}, 2000);
+				element.classList.toggle('current-move', false);
+			}, 1500);
+			setTimeout(() => {resolve('resolved');}, 2500);
 		});
 	}
 }

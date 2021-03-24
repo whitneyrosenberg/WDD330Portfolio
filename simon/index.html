@@ -33,23 +33,29 @@
 
 			<use xlink:href="#circle" opacity="1" fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-width="10" stroke-opacity="1"></use>
 			
-			<g class="up"><use xlink:href="#red" opacity="1" fill="#ae0000" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
+			<g class="up"><use xlink:href="#red" opacity="1" fill="#BF3030" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
 			<use xlink:href="#up-arrow" opacity="1" fill="#ffffff" fill-opacity="1"></use></g>
 
 			<g class="right">
-			<use xlink:href="#blue" opacity="1" fill="#0d30ba" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
+			<use xlink:href="#blue" opacity="1" fill="#40E6FF" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
 			<use xlink:href="#right-arrow" opacity="1" fill="#ffffff" fill-opacity="1"></use>
 			</g>
 
 			<g class="down">
-			<use xlink:href="#yellow" opacity="1" fill="#e0bd09" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
+			<use xlink:href="#yellow" opacity="1" fill="#FFEA80" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
 			<use xlink:href="#down-arrow" opacity="1" fill="#ffffff" fill-opacity="1"></use>
 			</g>
 
 			<g class="left">
-			<use xlink:href="#green" opacity="1" fill="#067105" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
+			<use xlink:href="#green" opacity="1" fill="#208020" fill-opacity="1" stroke="#000000" stroke-width="5" stroke-opacity="1"></use>
 			<use xlink:href="#left-arrow" opacity="1" fill="#ffffff" fill-opacity="1"></use>
 			</g>
+
+			<defs>
+				<filter id="saturate" filterUnits="objectBoundingBox">
+					<feColorMatrix type="saturate" in="SourceGraphic" values="5"/>
+				</filter>
+			</defs>
 		</svg>
 	</div>
 	<script src="js/simon.js" type="module"></script>
