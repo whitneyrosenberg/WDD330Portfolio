@@ -5,13 +5,16 @@ import {
 export default class SimonGame {
 	constructor() {
 		this.currentGame = [];
+		this.notPlaying = false;
 	}
 
 	async playCurrentGame() {
+		this.notPlaying = false;
 		for(let move in this.currentGame) {
 			const result = await this.executeMove(this.currentGame[move]);
 		}
 		this.newMove();
+		this.notPlaying = true;
 	}
 
 	newMove() {
@@ -29,7 +32,7 @@ export default class SimonGame {
 				this.currentGame.push('left');
 				this.executeMove('left');
 			break;
-			case 3: 
+			case 3:
 				this.currentGame.push('right');
 				this.executeMove('right');
 			break;
@@ -40,8 +43,12 @@ export default class SimonGame {
 		return this.currentGame;
 	}
 
+	isNotPlaying() {
+		return this.notPlaying;
+	}
+
 	executeMove(move) {
-		let element = qs(`.${move}`)[0].children[0];
+		let element = qs(`#${move}`)[0].children[0];
 		element.classList.toggle('current-move', true);
 		return new Promise(resolve => {
 			setTimeout(() => {

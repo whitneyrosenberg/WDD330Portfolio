@@ -14,3 +14,14 @@ h1 {
 	-o-filter: url(#saturate);
 	filter: url(#saturate);
 }
+
+#start-game {
+	text-align: center;
+	border: 1px solid black;
+	width: 300px;
+	margin: auto;
+}
+
+.hidden {
+	display: none;
+}
