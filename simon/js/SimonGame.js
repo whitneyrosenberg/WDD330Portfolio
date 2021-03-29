@@ -57,4 +57,8 @@ export default class SimonGame {
 			setTimeout(() => {resolve('resolved');}, 1500);
 		});
 	}
+
+	resetCurrentGame() {
+		this.currentGame = [];
+	}
 }
