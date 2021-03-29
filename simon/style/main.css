@@ -26,6 +26,10 @@ h1 {
 	display: none !important;
 }
 
+#high-score {
+	text-align: center;
+}
+
 /* Popup box BEGIN */
 #hover_bkgr_fricc{
     background:rgba(0,0,0,.4);
@@ -76,4 +80,3 @@ h1 {
 #popup-close-button:hover {
     background-color: #ccc;
 }
-/* Popup box BEGIN */
