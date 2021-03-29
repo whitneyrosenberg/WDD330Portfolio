@@ -47,7 +47,7 @@ function handleUserMove(userMove) {
         }
         if(controller.currentMove === currentGame.length) {
             controller.currentMove = 0;
-            controller.simonGame.playCurrentGame();
+            setTimeout(() => { controller.simonGame.playCurrentGame(); }, 2500);
         }
     }
 }
