@@ -4,7 +4,7 @@ function qs(selector) {
   }
   
   function onTouch(element, callback) {
-    element.addEventListener('touchend', callback);
+    element.addEventListener('touchstart', callback);
     element.addEventListener('click', callback);
   }
   
