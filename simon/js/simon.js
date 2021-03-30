@@ -73,6 +73,7 @@ function gameOver() {
     controller.currentMove = 0;
     controller.simonGame.resetCurrentGame();
     if(controller.highScore < controller.currentScore) {
+        qs('#new-high-score')[0].classList.toggle('hidden', false);
         writeToLS('highScore', controller.currentScore);
     }
     qs('#hover_bkgr_fricc')[0].classList.toggle('hidden', false);
