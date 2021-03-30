@@ -6,6 +6,8 @@ export default class SimonGame {
 	constructor() {
 		this.currentGame = [];
 		this.notPlaying = false;
+		this.lengthOfMove = 1000;
+		this.timeBetweenMoves = 500;
 	}
 
 	async playCurrentGame() {
@@ -14,6 +16,7 @@ export default class SimonGame {
 			const result = await this.executeMove(this.currentGame[move]);
 		}
 		this.newMove();
+		this.updateMoveDuration();
 		this.notPlaying = true;
 	}
 
@@ -53,12 +56,21 @@ export default class SimonGame {
 		return new Promise(resolve => {
 			setTimeout(() => {
 				element.classList.toggle('current-move', false);
-			}, 1000);
-			setTimeout(() => {resolve('resolved');}, 1500);
+			}, this.lengthOfMove);
+			setTimeout(() => {resolve('resolved');}, this.lengthOfMove + this.timeBetweenMoves);
 		});
+	}
+
+	updateMoveDuration() {
+		if (this.currentGame.length % 2 === 0) {
+			this.lengthOfMove = this.lengthOfMove > 200 ? this.lengthOfMove - 100 : 100;
+			this.timeBetweenMoves = this.timeBetweenMoves > 100? this.timeBetweenMoves - 50 : 50;
+		}
 	}
 
 	resetCurrentGame() {
 		this.currentGame = [];
+		this.lengthOfMove = 1000;
+		this.timeBetweenMoves = 500;
 	}
 }
