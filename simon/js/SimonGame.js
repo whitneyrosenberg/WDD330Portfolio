@@ -51,8 +51,10 @@ export default class SimonGame {
 	}
 
 	executeMove(move) {
-		let element = qs(`#${move}`)[0].children[0];
+		let parentGroup = qs(`#${move}`)[0];
+		let element = parentGroup.children[0];
 		element.classList.toggle('current-move', true);
+		this.playSound(parentGroup);
 		return new Promise(resolve => {
 			setTimeout(() => {
 				element.classList.toggle('current-move', false);
@@ -72,5 +74,18 @@ export default class SimonGame {
 		this.currentGame = [];
 		this.lengthOfMove = 1000;
 		this.timeBetweenMoves = 500;
+		this.notPlaying = false;
+	}
+
+	playSound(element) {
+		qs('audio').forEach(x => {
+			x.pause();
+		});
+		const keyCode = element.getAttribute('data-key');
+		const audio = qs(`audio[data-key="${keyCode}"]`)[0];
+		if (!audio) return;
+
+	    audio.currentTime = 0;
+		audio.play();
 	}
 }
