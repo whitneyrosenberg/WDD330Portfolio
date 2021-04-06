@@ -22,7 +22,7 @@ const controller = {
             const popupClose = qs("#popup-close-button")[0];
 
             if (this.highScore > 0) {
-                qs('#high-score')[0].innerHTML = `High Score <br>${this.highScorer}: ${this.highScore}`;
+                qs('#high-score')[0].innerHTML = `High Score <br>${this.highScorer} ${this.highScore}`;
             }
 
             onTouch(startButton, () => {
