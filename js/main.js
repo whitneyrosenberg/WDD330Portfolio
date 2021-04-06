@@ -3,6 +3,10 @@ window.onload = function () {
 
 	const tableOfContents = [
 		{
+			label: 'Simon Game - Final Project',
+			url: '/WDD330Portfolio/simon/'
+		},
+		{
 			label: 'Week 10 Work',
 			url: '/WDD330Portfolio/week10/'
 		},
