@@ -39,6 +39,16 @@ const controller = {
                 writeToLS('name', name);
                 location.reload();
             });
+
+            window.addEventListener('keydown', (event) => {
+                if(parseInt(event.keyCode) >= 37 && parseInt(event.keyCode) <= 40) {
+                    event.preventDefault();
+                    let keyPressed = event.key;
+                    let moveName = keyPressed.substring(5, keyPressed.length);
+                    let move = moveName.toLowerCase();
+                    handleUserMove(move);
+                }
+            });
         });
         groups.forEach((group) => {
             onTouch(group, (event) => {
