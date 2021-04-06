@@ -18,8 +18,10 @@ h1 {
 #start-game {
 	text-align: center;
 	border: 1px solid black;
-	width: 300px;
+	width: 100px;
 	margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .hidden {
